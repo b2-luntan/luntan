@@ -24,14 +24,14 @@
 	margin-right:10px;
 	margin-top:3px;
 }
-span{
+.span{
 	color:#fff;
 	font-weight:bold;
 }
 </style>
 <body>
 	<div class="edt-hide">
-		<span>编写文章</span>
+		<span class=".span">编写文章</span>
 		<button type="button" class="edt-quxiao btn btn-default btn-xs">
 			取消
 	    </button>
@@ -72,6 +72,14 @@ span{
 <script src="js/bootstrap-filestyle.js"></script>
 <script src="js/home.js"></script>
 <script>
+	$('#input04').filestyle({
+		icon : false,
+		buttonText:"选择图片",
+		buttonBefore : true
+	});
+	$('#input05').filestyle({
+		buttonName : 'btn-warning'
+	});
 	$('.edt-quxiao').on('click',function(){
 		top.hide_iframe();
 	})
