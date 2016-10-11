@@ -179,20 +179,15 @@ iframe{
 	bottom: 0px;
 	display: none;
 }
-<<<<<<< HEAD
 .touxiang{
 	width: 30px;
 	height: 30px;
 	border-radius: 30px;
-	
-=======
+	}
 .hande{
 	width: 100%;
 	padding-top:10px;
-	/*border-left: 1px solid #666;
-	border-right: 1px solid #666;
-	border-bottom: 1px solid #666;
-*/}
+	}
 .h_a:hover{
 	text-decoration: none;
 	color:#228B22;
@@ -220,5 +215,4 @@ iframe{
 }
 .h_user .name{
 
->>>>>>> origin/master
 }
