@@ -179,9 +179,46 @@ iframe{
 	bottom: 0px;
 	display: none;
 }
+<<<<<<< HEAD
 .touxiang{
 	width: 30px;
 	height: 30px;
 	border-radius: 30px;
 	
+=======
+.hande{
+	width: 100%;
+	padding-top:10px;
+	/*border-left: 1px solid #666;
+	border-right: 1px solid #666;
+	border-bottom: 1px solid #666;
+*/}
+.h_a:hover{
+	text-decoration: none;
+	color:#228B22;
+}
+.h_a{
+	color:#228B22;
+	line-height: 30px;
+}
+.h_title{
+	color: #228B22;
+	padding:10px;
+	margin:10px;
+}
+#grid li{
+	box-shadow: 3px 3px 10px #666;
+}
+.h_user .h_img{
+	width: 30px;
+	height: 30px;
+	border-radius: 30px;
+}
+.h_div{
+	float: left;
+	margin-left: 10px;
+}
+.h_user .name{
+
+>>>>>>> origin/master
 }
