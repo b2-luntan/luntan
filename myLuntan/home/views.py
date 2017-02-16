@@ -9,6 +9,9 @@ def index(request):
 def add (request):
 	return render(request , 'add.html')
 
+def login(request):
+	return render(request , 'login.html')
+
 def testjia(request):
 	a = request.GET['a']
 	b = request.GET['b']
