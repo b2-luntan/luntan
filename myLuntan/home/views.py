@@ -4,7 +4,10 @@ from django.http import HttpResponse
 
 # Create your views here.
 def index(request):
-	return HttpResponse(u"欢迎光临，帅气的光的页面")
+	return render(request , "index.html")
+
+def add (request):
+	return render(request , 'add.html')
 
 def testjia(request):
 	a = request.GET['a']

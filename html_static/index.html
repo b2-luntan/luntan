@@ -9,9 +9,7 @@
 		<link rel="stylesheet" type="text/css" href="css/default.css" />
 		<link rel="stylesheet" type="text/css" href="css/component.css" />
 		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-		<script src="js/jquery.min.js"></script>
-		<script src="js/modernizr.custom.js"></script>
-		<script src="js/bootstrap.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="css/img_piaofu.css">
 	</head>
 	<body>
 	<!-- 背景图片  -->
@@ -22,7 +20,12 @@
 			<div id="top">
 				<div class="content">
 					<div class="top_left">
-						<div class="temp_img">这是LOGO</div>
+						<div class="temp_img">
+							<!-- <img src="images/background.jpg" style="width:200px;height:100px;"> -->
+							<div class="cover atvImg" style="width: 200px;height: 100px">
+								<img class="atvImg-layer" src="images/background.jpg" data-img="images/background.jpg" />
+							</div>
+						</div>
 					</div>
 					<div class="top_right">
 						<span><img class="touxiang" src="images/"></span>
@@ -68,7 +71,11 @@
 			</header>
 			<ul class="grid effect-5" id="grid">
 				<li>
-					<a href="#"><img class="img-responsive" src="images/1.jpg"></a>
+					<a href="#">
+						<div class="cover atvImg" style="width: 305px;height: 488px">
+							<img class="atvImg-layer" data-img="images/1.jpg" src="images/1.jpg">
+						</div>
+					</a>
 					<div class="hande">
 						<div><a class="h_a" href="#"><span class="h_title">国庆世界之窗游记</span></a></div>
 						<hr style="height:10px;padding:0px;margin:0px;">
@@ -80,7 +87,11 @@
 						</div>
 					</div>
 				</li>
-				<li><a href="#"><img class="img-responsive" src="images/3.jpg"></a></li>
+				<li>
+				<a href="#">
+					<img src="images/3.jpg">
+				</a>
+				</li>
 				<li><a href="#"><img class="img-responsive" src="images/4.jpg"></a></li>
 				<li><a href="#"><img class="img-responsive" src="images/12.png"></a></li>
 				<li><a href="#"><img class="img-responsive" src="images/13.png"></a></li>
@@ -180,11 +191,15 @@
 		<div id="edt">
 				<iframe class="iframe" src="edit.html" width="100%" height="400px"></iframe>
 		</div>
+
+		<script src="js/jquery.min.js"></script>
+		<script src="js/modernizr.custom.js"></script>
+		<script src="js/bootstrap.min.js"></script>
 		<script src="js/masonry.pkgd.min.js"></script>
 		<script src="js/imagesloaded.js"></script>
 		<script src="js/classie.js"></script>
 		<script src="js/AnimOnScroll.js"></script>
-		<script src="js/home.js"></script>
+		<script src="js/img_piaofu.js"></script>
 		<script>
 			new AnimOnScroll( document.getElementById( 'grid' ), {
 				minDuration : 0.4,

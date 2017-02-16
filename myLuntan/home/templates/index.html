@@ -1,0 +1,202 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="zh" class="no-js">
+	{% include 'load/head.html' %}
+	<body>
+	<!-- 背景图片  -->
+		<!-- <div id="Layer1" style="position:fixed;left:0px;top:0px; width:100%; height:100%; z-index:-1">   
+			<img src="images/background.jpg" height="100%" width="100%"/>   
+		</div>   -->
+		<div class="container">
+			<div id="top">
+				<div class="content">
+					<div class="top_left">
+						<div class="temp_img">
+							<!-- <img src="images/background.jpg" style="width:200px;height:100px;"> -->
+							<div class="cover atvImg" style="width: 200px;height: 100px">
+								<img class="atvImg-layer" src="{% static 'images/background.jpg' %}" data-img="{% static 'images/background.jpg' %}" />
+							</div>
+						</div>
+					</div>
+					<div class="top_right">
+						<span><img src="{% static 'images/ico_ios.png'%}"></span>
+						<span><img src="{% static 'images/ico_android.png'%}"></span>
+						<span><a class="btn btn-primary" href="javascript:void(0)">注册</a></span>
+						<span><a class="btn btn-primary" href="javascript:void(0)">登陆</a></span>
+					</div>
+				</div>
+			</div>
+		</div>
+				<nav class="navbar navbar-default" role="navigation">
+				    <div class="container-fluid content">
+					    <div class="navbar-header">
+					        <a class="navbar-brand" href="#">学神论坛</a>
+					    </div>
+					    <div>
+					        <ul class="nav navbar-nav">
+					            <li class="active"><a href="#">首页</a></li>
+					            <li><a href="#">心路历程</a></li>
+					            <li class="dropdown">
+					                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+					                    技术分享
+					                    <b class="caret"></b>
+					                </a>
+					                <ul class="dropdown-menu">
+					                    <li><a href="#">python基础</a></li>
+					                    <li><a href="#">python进阶</a></li>
+					                    <li class="divider">进阶</li>
+					                    <li><a href="#">python爬虫</a></li>
+					                    <li class="divider"></li>
+					                    <li><a href="#">地将狗</a></li>
+					                </ul>
+					            </li>
+					        </ul>
+					    </div>
+				    </div>
+				</nav>
+		<div class="container">
+			<header>
+				<h1>啊飒飒的</h1>
+				<p>嘿嘿嘿</p>
+			</header>
+			<ul class="grid effect-5" id="grid">
+				<li>
+					<a href="#">
+						<div class="cover atvImg" style="width: 305px;height: 488px">
+							<img class="atvImg-layer" data-img="{% static 'images/1.jpg'%}" src="{% static 'images/1.jpg'%}">
+						</div>
+					</a>
+					<div class="hande">
+						<div><a class="h_a" href="#"><span class="h_title">国庆世界之窗游记</span></a></div>
+						<hr style="height:10px;padding:0px;margin:0px;">
+						<div class="h_user">
+							<div class="h_div"><a href="#" class="h_a"><img class="h_img" src="{% static 'images/ico_android.png'%}"></a></div>
+							<div class="h_div"><a href="#" class="h_a">光宴</a></div>
+							<div class="h_div" style="line-height: 30px">发布在</div>
+							<div class="h_div"><a href="#" class="h_a">自己的博客</a></div>
+						</div>
+					</div>
+				</li>
+				<li>
+					<a href="#">
+						<img src="{%static 'images/3.jpg'%}">
+					</a>
+				</li>
+				<li><a href="#"><img class="img-responsive" src="{% static 'images/4.jpg'%}"></a></li>
+				<li><a href="#"><img class="img-responsive" src="{% static 'images/5.jpg'%}"></a></li>
+				<li><a href="#"><img class="img-responsive" src="{% static 'images/13.png'%}"></a></li>
+				<li><a href="#"><img class="img-responsive" src="{% static 'images/10.png'%}"></a></li>
+				<li><a href="#"><img class="img-responsive" src="{% static 'images/9.jpg'%}"></a></li>
+				<li><a href="#"><img class="img-responsive" src="{% static 'images/2.jpg'%}"></a></li>
+				<li><a href="#"><img class="img-responsive" src="{% static 'images/14.png'%}"></a></li>
+				<li><a href="#"><img class="img-responsive" src="{% static 'images/5.jpg'%}"></a></li>
+				<li><a href="#"><img class="img-responsive" src="{% static 'images/6.jpg'%}"></a></li>
+				<li><a href="#"><img class="img-responsive" src="{% static 'images/7.jpg'%}"></a></li>
+				<li><a href="#"><img class="img-responsive" src="{% static 'images/8.jpg'%}"></a></li>
+				<li><a href="#"><img class="img-responsive" src="{% static 'images/9.jpg'%}"></a></li>
+				<li><a href="#"><img class="img-responsive" src="{% static 'images/12.png'%}"></a></li>
+				<li><a href="#"><img class="img-responsive" src="{% static 'images/13.png'%}"></a></li>
+				<li><a href="#"><img class="img-responsive" src="{% static 'images/10.png'%}"></a></li>
+				<li><a href="#"><img class="img-responsive" src="{% static 'images/11.png'%}"></a></li>
+				<li><a href="#"><img class="img-responsive" src="{% static 'images/2.jpg'%}"></a></li>
+				<li><a href="#"><img class="img-responsive" src="{% static 'images/14.png'%}"></a></li>
+				<li><a href="#"><img class="img-responsive" src="{% static 'images/1.jpg'%}"></a></li>
+				<li><a href="#"><img class="img-responsive" src="{% static 'images/3.jpg'%}"></a></li>
+				<li><a href="#"><img class="img-responsive" src="{% static 'images/4.jpg'%}"></a></li>
+				<li><a href="#"><img class="img-responsive" src="{% static 'images/5.jpg'%}"></a></li>
+				<li><a href="#"><img class="img-responsive" src="{% static 'images/6.jpg'%}"></a></li>
+				<li><a href="#"><img class="img-responsive" src="{% static 'images/7.jpg'%}"></a></li>
+				<li><a href="#"><img class="img-responsive" src="{% static 'images/8.jpg'%}"></a></li>
+				<li><a href="#"><img class="img-responsive" src="{% static 'images/9.jpg'%}"></a></li>
+				<li><a href="#"><img class="img-responsive" src="{% static 'images/12.png'%}"></a></li>
+				<li><a href="#"><img class="img-responsive" src="{% static 'images/13.png'%}"></a></li>
+				<li><a href="#"><img class="img-responsive" src="{% static 'images/10.png'%}"></a></li>
+				<li><a href="#"><img class="img-responsive" src="{% static 'images/11.png'%}"></a></li>
+				<li><a href="#"><img class="img-responsive" src="{% static 'images/2.jpg'%}"></a></li>
+				<li><a href="#"><img class="img-responsive" src="{% static 'images/14.png'%}"></a></li>
+				<li><a href="#"><img class="img-responsive" src="{% static 'images/1.jpg'%}"></a></li>
+				<li><a href="#"><img class="img-responsive" src="{%static 'images/3.jpg'%}"></a></li>
+				<li><a href="#"><img class="img-responsive" src="{% static 'images/4.jpg'%}"></a></li>
+				<li><a href="#"><img class="img-responsive" src="{% static 'images/5.jpg'%}"></a></li>
+				<li><a href="#"><img class="img-responsive" src="{% static 'images/6.jpg'%}"></a></li>
+				<li><a href="#"><img class="img-responsive" src="{% static 'images/7.jpg'%}"></a></li>
+				<li><a href="#"><img class="img-responsive" src="{% static 'images/8.jpg'%}"></a></li>
+				<li><a href="#"><img class="img-responsive" src="{% static 'images/9.jpg'%}"></a></li>
+				<li><a href="#"><img class="img-responsive" src="{% static 'images/12.png'%}"></a></li>
+				<li><a href="#"><img class="img-responsive" src="{% static 'images/13.png'%}"></a></li>
+				<li><a href="#"><img class="img-responsive" src="{% static 'images/10.png'%}"></a></li>
+				<li><a href="#"><img class="img-responsive" src="{% static 'images/11.png'%}"></a></li>
+				<li><a href="#"><img class="img-responsive" src="{% static 'images/2.jpg'%}"></a></li>
+				<li><a href="#"><img class="img-responsive" src="{% static 'images/14.png'%}"></a></li>
+				<li><a href="#"><img class="img-responsive" src="{% static 'images/1.jpg'%}"></a></li>
+				<li><a href="#"><img class="img-responsive" src="{%static 'images/3.jpg'%}"></a></li>
+				<li><a href="#"><img class="img-responsive" src="{% static 'images/4.jpg'%}"></a></li>
+				<li><a href="#"><img class="img-responsive" src="{% static 'images/5.jpg'%}"></a></li>
+				<li><a href="#"><img class="img-responsive" src="{% static 'images/6.jpg'%}"></a></li>
+				<li><a href="#"><img class="img-responsive" src="{% static 'images/7.jpg'%}"></a></li>
+				<li><a href="#"><img class="img-responsive" src="{% static 'images/8.jpg'%}"></a></li>
+				<li><a href="#"><img class="img-responsive" src="{% static 'images/9.jpg'%}"></a></li>
+				<li><a href="#"><img class="img-responsive" src="{% static 'images/12.png'%}"></a></li>
+				<li><a href="#"><img class="img-responsive" src="{% static 'images/13.png'%}"></a></li>
+				<li><a href="#"><img class="img-responsive" src="{% static 'images/10.png'%}"></a></li>
+				<li><a href="#"><img class="img-responsive" src="{% static 'images/11.png'%}"></a></li>
+				<li><a href="#"><img class="img-responsive" src="{% static 'images/2.jpg'%}"></a></li>
+				<li><a href="#"><img class="img-responsive" src="{% static 'images/14.png'%}"></a></li>
+				<li><a href="#"><img class="img-responsive" src="{% static 'images/1.jpg'%}"></a></li>
+				<li><a href="#"><img class="img-responsive" src="{%static 'images/3.jpg'%}"></a></li>
+				<li><a href="#"><img class="img-responsive" src="{% static 'images/4.jpg'%}"></a></li>
+				<li><a href="#"><img class="img-responsive" src="{% static 'images/5.jpg'%}"></a></li>
+				<li><a href="#"><img class="img-responsive" src="{% static 'images/6.jpg'%}"></a></li>
+				<li><a href="#"><img class="img-responsive" src="{% static 'images/7.jpg'%}"></a></li>
+				<li><a href="#"><img class="img-responsive" src="{% static 'images/8.jpg'%}"></a></li>
+				<li><a href="#"><img class="img-responsive" src="{% static 'images/9.jpg'%}"></a></li>
+				<li><a href="#"><img class="img-responsive" src="{% static 'images/12.png'%}"></a></li>
+				<li><a href="#"><img class="img-responsive" src="{% static 'images/13.png'%}"></a></li>
+				<li><a href="#"><img class="img-responsive" src="{% static 'images/10.png'%}"></a></li>
+				<li><a href="#"><img class="img-responsive" src="{% static 'images/11.png'%}"></a></li>
+				<li><a href="#"><img class="img-responsive" src="{% static 'images/2.jpg'%}"></a></li>
+				<li><a href="#"><img class="img-responsive" src="{% static 'images/14.png'%}"></a></li>
+				<li><a href="#"><img class="img-responsive" src="{% static 'images/1.jpg'%}"></a></li>
+				<li><a href="#"><img class="img-responsive" src="{%static 'images/3.jpg'%}"></a></li>
+				<li><a href="#"><img class="img-responsive" src="{% static 'images/4.jpg'%}"></a></li>
+				<li><a href="#"><img class="img-responsive" src="{% static 'images/5.jpg'%}"></a></li>
+				<li><a href="#"><img class="img-responsive" src="{% static 'images/6.jpg'%}"></a></li>
+				<li><a href="#"><img class="img-responsive" src="{% static 'images/7.jpg'%}"></a></li>
+				<li><a href="#"><img class="img-responsive" src="{% static 'images/8.jpg'%}"></a></li>
+				<li><a href="#"><img class="img-responsive" src="{% static 'images/9.jpg'%}"></a></li>
+				<li><a href="#"><img class="img-responsive" src="{% static 'images/3.jpg'%}"></a></li>
+				<li><a href="#"><img class="img-responsive" src="{% static 'images/5.jpg'%}"></a></li>
+				<li><a href="#"><img class="img-responsive" src="{% static 'images/2.jpg'%}"></a></li>
+			</ul>
+		</div>
+		<!-- 底部提示点击 -->
+		<div id="bottom-prompt">
+			<div class="content">
+				<div class="prompt-con">
+					<a href="javascript:void(0)" class="edt btn btn-primary">我要写文章</a>
+				</div>
+			</div>
+		</div>
+		<!-- 编辑框 -->
+		<div id="edt">
+				<iframe class="iframe" src="{%url 'add'%}" width="100%" height="400px"></iframe>
+		</div>
+		{% include 'load/js.html'%}
+		<script>
+			new AnimOnScroll( document.getElementById( 'grid' ), {
+				minDuration : 0.4,
+				maxDuration : 0.7,
+				viewportFactor : 0.2
+			} );
+			$('.edt').on('click',function(){
+				$('#bottom-prompt').hide('50');
+				$('.iframe').show('400');
+			});
+			function hide_iframe(){
+				// alert('在iframe里面调用外部方法');
+				$('.iframe').hide('50');
+				$('#bottom-prompt').show('400');
+			}
+		</script>
+	</body>
+</html>

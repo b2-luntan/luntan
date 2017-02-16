@@ -1,11 +1,7 @@
+{% load static %}
 <!DOCTYPE html>
 <html>
-<head>
-	<title></title>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="css/default.css" />
-</head>
+{% include 'load/head.html '%}
 <style type="text/css">
 .row{
 	margin-left:0px;
@@ -67,9 +63,8 @@
 		</form> 
 	</div>
 </body>
-<script src="js/jquery.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/bootstrap-filestyle.js"></script>
+{% include 'load/js.html'%}
+<script src="{% static 'js/bootstrap-filestyle.js'%}"></script>
 <script>
 	$('#input04').filestyle({
 		icon : false,
