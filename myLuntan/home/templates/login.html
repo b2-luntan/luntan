@@ -95,7 +95,7 @@ $(document).on('pjax:end', function() {
 			$(this).next().addClass("focussed").children().stop(true).each(function(i){
 				d = i*50;
 				$(this).delay(d).animate({fontSize: "16px", top: "-20px" , color:'#fff'}, 50 , 'swing' , function () {
-					$('.ch').css('color', '#fff');
+					$(this).css('color', '#fff');
 				});
 			})
 		})
@@ -105,7 +105,7 @@ $(document).on('pjax:end', function() {
 				$(this).next().removeClass("focussed").children().stop(true).each(function(i){
 					d = i*50;
 					$(this).delay(d).animate({fontSize: "18px", top: 0 , color : '#000'}, 50 , 'swing' , function () {
-						$('.ch').css('color' , '#000');
+						$(this).css('color' , '#000');
 					});
 				})
 			}
