@@ -1,5 +1,4 @@
 {%load static%}
-{% include 'load/head.html' %}
 <link rel="stylesheet" href="{% static 'css/login/htmleaf-demo.css'%}">
 <link rel="stylesheet" href="{% static 'css/login/reset.css'%}">
 <link rel="stylesheet" href="{% static 'css/login/skippr.css'%}">
@@ -7,12 +6,12 @@
 <body>
 	<div class="hero">
 			<div id="random">
-	             	<div class="custom_1" style="background-image: url(../static/images/login/bg_1.jpg)">
-	                </div>
-	                <div style="background-image: url(../static/images/login/bg_2.jpg)"></div> 
-	                <div style="background-image: url(../static/images/login/bg_3.jpg); background-position:bottom;"></div>
-	                <div style="background-image: url(../static/images/login/bg_4.jpg)"></div>                   
-	                <div style="background-image: url(../static/images/login/bg_5.jpg)"></div>
+	             	<div class="custom_1"></div>
+	                <div class="custom_2"></div> 
+	                <!-- <div class="custom_3" style="background-image: url(../static/images/login/bg_3.jpg); background-position:bottom;"></div> -->
+	                <div class="custom_3"></div>
+	                <div class="custom_4"></div>                   
+	                <div class="custom_5"></div>
 	          </div>
             <div class="container">
                 <div class="tagline">
@@ -21,18 +20,31 @@
                 </div>
             </div>
       </div>
-	
-	{% include 'load/js.html' %}
-	<script src="{%static 'js/login/skippr.min.js'%}"></script>
-	<script>
-            $(document).ready(function() {
-                $("#random").skippr({
-                    autoPlay : true,
-                    autoPlayDuration : 3000,
-                    easing:'easeInOutCubic',
-                    logs : true
-                });
-            });
-
-        </script>
+<script>
+// 判断是否是 pjax 进来的，还是用户输入url 进来的
+ try {
+	if (typeof(PJAX_ZPC_JS) == "undefined") {
+		document.cookie = "url="+window.location.pathname;
+		window.location.href="/";
+	}	
+} catch(e) {
+	document.cookie = "url="+window.location.pathname;
+	window.location.href="/";
+}
+console.log(document.cookie);
+$(document).on('pjax:end', function() {
+		console.log(PJAX_ZPC_JS);
+    $('.custom_1').css('background-image','url(../static/images/login/bg_1.jpg)');
+	$('.custom_2').css('background-image','url(../static/images/login/bg_2.jpg)');
+	$('.custom_3').css('background-image','url(../static/images/login/bg_3.jpg)');
+	$('.custom_4').css('background-image','url(../static/images/login/bg_4.jpg)');
+	$('.custom_5').css('background-image','url(../static/images/login/bg_5.jpg)');
+    $("#random").skippr({
+        autoPlay : true,
+        autoPlayDuration : 3000,
+        easing:'easeInOutCubic',
+        logs : true
+    });
+});
+</script>
 </body>

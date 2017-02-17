@@ -183,6 +183,11 @@
 		</div>
 		{% include 'load/js.html'%}
 		<script>
+			function hide_iframe(){
+				// alert('在iframe里面调用外部方法');
+				$('.iframe').hide('50');
+				$('#bottom-prompt').show('400');
+			}
 			new AnimOnScroll( document.getElementById( 'grid' ), {
 				minDuration : 0.4,
 				maxDuration : 0.7,
@@ -192,11 +197,7 @@
 				$('#bottom-prompt').hide('50');
 				$('.iframe').show('400');
 			});
-			function hide_iframe(){
-				// alert('在iframe里面调用外部方法');
-				$('.iframe').hide('50');
-				$('#bottom-prompt').show('400');
-			}
+			
 		</script>
 	</body>
 </html>

@@ -8,6 +8,34 @@
 <script src="{% static 'js/AnimOnScroll.js'%}"></script>
 <script src="{% static 'js/img_piaofu.js'%}"></script>
 <script src="{% static 'js/jquery.pjax.js'%}"></script>
+<script src="{%static 'js/login/skippr.min.js'%}"></script>
 <script type="text/javascript">
+	//获取cookie的操作, 过一会 放到主体js里面
+	function getCookie(cname)
+	{
+	  var name = cname + "=";
+	  var ca = document.cookie.split(';');
+	  for(var i=0; i<ca.length; i++) 
+	  {
+	    var c = ca[i].trim();
+	    if (c.indexOf(name)==0) return c.substring(name.length,c.length);
+	  }
+	  return "";
+	}
+	//给所有的pjax类加上pjax跳转
 	$(document).pjax('.pjax', 'body');
+    $(document).on('pjax:end', function() {
+    	console.log('当前.pjax已经加载pjax');
+		$(document).pjax('.pjax', 'body');
+
+    });
+    var PJAX_ZPC_JS = 1;
+    //如果url！=1 说明用户从别的页面访问过来了，我们需要加载完资源文件后，在使用pjax跳转回去，
+    if (getCookie('url') !== '' && getCookie('url') !=1){
+    	var url = getCookie('url');
+    	document.cookie = "url=1";
+    	setTimeout(function () {
+    		$.pjax({url: url, container: 'body'});
+    	},1);
+    }
 </script>
