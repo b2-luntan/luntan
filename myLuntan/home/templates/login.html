@@ -3,6 +3,19 @@
 <link rel="stylesheet" href="{% static 'css/login/reset.css'%}">
 <link rel="stylesheet" href="{% static 'css/login/skippr.css'%}">
 <link rel="stylesheet" href="{% static 'css/login/style.css'%}">
+<style>
+*{color: #fff}
+.flp {width: 400px; margin: 0 auto;}
+.flp div{position: relative;margin-bottom: 50px;}
+.flp input, .flp label {width: 100%; font-size: inherit; display: block;}
+.flp input { border: 0 none; border-bottom: 3px solid #000; outline: none; color: #000;background: rbga(0,0,0,0);}
+.flp label { position: absolute; top: 0; left: 0; cursor: text; color: #000;}
+.ch {display: block; float: left; position: relative;font-weight:normal;color:#000;}
+.focussed {pointer-events: none;}
+.htmleaf-header{font-size: 18px;}
+.related{font-size: 18px;}
+.htmleaf-container{font-size: 18px;}
+</style>
 <body>
 	<div class="hero">
 			<div id="random">
@@ -15,8 +28,22 @@
 	          </div>
             <div class="container">
                 <div class="tagline">
-                    <h1>登陆</h1>
-                    <p>这里是登陆页面</p>
+            		<h1>b2-luntan</h1>
+            		<small>让我们像家人那样坐下来聊聊技术吧</small><hr>
+					<div class="htmleaf-container">
+						<div class="htmleaf-content">
+		                	<form action="" method="post" class="flp">
+		                		<div class="form-group">
+		                			<input type="text" class="form-control" id="account" name="account" style="">
+		                			<label for="account">账号:</label>
+		                		</div>
+		                		<div class="form-group">
+		                			<input type="password" class="form-control" id="password" name="password" style="">
+		                			<label for="password">密码:</label>
+		                		</div>
+		                	</form>
+		                </div>
+		            </div>
                 </div>
             </div>
       </div>
@@ -33,18 +60,56 @@
 }
 console.log(document.cookie);
 $(document).on('pjax:end', function() {
-		console.log(PJAX_ZPC_JS);
-    $('.custom_1').css('background-image','url(../static/images/login/bg_1.jpg)');
-	$('.custom_2').css('background-image','url(../static/images/login/bg_2.jpg)');
-	$('.custom_3').css('background-image','url(../static/images/login/bg_3.jpg)');
-	$('.custom_4').css('background-image','url(../static/images/login/bg_4.jpg)');
-	$('.custom_5').css('background-image','url(../static/images/login/bg_5.jpg)');
+    $('.custom_1').css({
+    	'background-image':'url(../static/images/login/bg_1.jpg)',
+    	'filter' : 'blur(9px)'
+    });
+	$('.custom_2').css({
+		'background-image':'url(../static/images/login/bg_2.jpg)',
+		'filter' : 'blur(9px)',
+	});
+	$('.custom_3').css({
+		'background-image':'url(../static/images/login/bg_3.jpg)',
+		'filter' : 'blur(9px)',
+	});
+	$('.custom_4').css({
+		'background-image':'url(../static/images/login/bg_4.jpg)',
+		'filter' : 'blur(9px)',
+	});
+	$('.custom_5').css({
+		'background-image':'url(../static/images/login/bg_5.jpg)',
+		'filter' : 'blur(9px)',
+	});
     $("#random").skippr({
         autoPlay : true,
         autoPlayDuration : 3000,
         easing:'easeInOutCubic',
         logs : true
     });
+    $(".flp label").each(function(){
+			$(this).html("<span class='ch'>" + $(this).html().split("").join("</span><span class='ch'>") + "</span>");
+			$(".ch:contains(' ')").html("&nbsp;");
+		})
+		var d;
+		$(".flp input").focus(function(){
+			$(this).next().addClass("focussed").children().stop(true).each(function(i){
+				d = i*50;
+				$(this).delay(d).animate({fontSize: "16px", top: "-20px" , color:'#fff'}, 50 , 'swing' , function () {
+					$('.ch').css('color', '#fff');
+				});
+			})
+		})
+		$(".flp input").blur(function(){
+			if($(this).val() == "")
+			{
+				$(this).next().removeClass("focussed").children().stop(true).each(function(i){
+					d = i*50;
+					$(this).delay(d).animate({fontSize: "18px", top: 0 , color : '#000'}, 50 , 'swing' , function () {
+						$('.ch').css('color' , '#000');
+					});
+				})
+			}
+		})
 });
 </script>
 </body>
