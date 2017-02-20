@@ -8,7 +8,7 @@
 .flp {width: 400px; margin: 0 auto;}
 .flp div{position: relative;margin-bottom: 50px;}
 .flp input, .flp label {width: 100%; font-size: inherit; display: block;}
-.flp input { border: 0 none; border-bottom: 3px solid #fff; outline: none; color: #fff;background: rbga(0,0,0,0);}
+.flp input { border: 0 none; border-bottom: 3px solid #fff; outline: none; color: #fff;background: rbga(0,0,0,0);background-color:transparent;outline: none;}
 .flp label { position: absolute; top: 0; left: 0; cursor: text; color: #fff;}
 .ch {display: block; float: left; position: relative;font-weight:normal;color:#fff;}
 .focussed {pointer-events: none;}
@@ -34,11 +34,11 @@
 						<div class="htmleaf-content">
 		                	<form action="" method="post" class="flp" autocomplete="off">
 		                		<div class="form-group">
-		                			<input type="text" id="account" name="account" style="background-color:transparent;outline: none;">
+		                			<input type="text" id="account" name="account">
 		                			<label for="account">账号:</label>
 		                		</div>
 		                		<div class="form-group">
-		                			<input type="text" id="password" name="password" style="background-color:transparent;outline: none;">
+		                			<input type="text" id="password" name="password">
 		                			<label for="password">密码:</label>
 		                		</div>
 		                	</form>
@@ -112,6 +112,9 @@ $(document).on('pjax:end', function() {
 	        logs : true
 	    });
 	    $('#password').attr('type','password');
+	    setTimeout(function (){
+		    $('input').val('');
+	    },100);
 	},300);
 });
 </script>
