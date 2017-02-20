@@ -186,8 +186,8 @@
 			}
 			function hide_iframe(){
 				// alert('在iframe里面调用外部方法');
-				$('.iframe').hide('50');
-				$('#bottom-prompt').show('400');
+				$('.iframe').slideToggle('slow');
+				$('#bottom-prompt').show();
 			}
 			new AnimOnScroll( document.getElementById( 'grid' ), {
 				minDuration : 0.4,
@@ -195,8 +195,8 @@
 				viewportFactor : 0.2
 			} );
 			$('.edt').on('click',function(){
-				$('#bottom-prompt').hide('50');
-				$('.iframe').show('400');
+				$('#bottom-prompt').hide();
+				$('.iframe').slideToggle('slow');
 			});
 			
 		</script>
