@@ -8,9 +8,9 @@
 .flp {width: 400px; margin: 0 auto;}
 .flp div{position: relative;margin-bottom: 50px;}
 .flp input, .flp label {width: 100%; font-size: inherit; display: block;}
-.flp input { border: 0 none; border-bottom: 3px solid #000; outline: none; color: #000;background: rbga(0,0,0,0);}
-.flp label { position: absolute; top: 0; left: 0; cursor: text; color: #000;}
-.ch {display: block; float: left; position: relative;font-weight:normal;color:#000;}
+.flp input { border: 0 none; border-bottom: 3px solid #fff; outline: none; color: #fff;background: rbga(0,0,0,0);}
+.flp label { position: absolute; top: 0; left: 0; cursor: text; color: #fff;}
+.ch {display: block; float: left; position: relative;font-weight:normal;color:#fff;}
 .focussed {pointer-events: none;}
 .htmleaf-header{font-size: 18px;}
 .related{font-size: 18px;}
@@ -32,13 +32,13 @@
             		<small>让我们像家人那样坐下来聊聊技术吧</small><hr>
 					<div class="htmleaf-container">
 						<div class="htmleaf-content">
-		                	<form action="" method="post" class="flp">
+		                	<form action="" method="post" class="flp" autocomplete="off">
 		                		<div class="form-group">
-		                			<input type="text" class="form-control" id="account" name="account" style="">
+		                			<input type="text" id="account" name="account" style="background-color:transparent;outline: none;">
 		                			<label for="account">账号:</label>
 		                		</div>
 		                		<div class="form-group">
-		                			<input type="password" class="form-control" id="password" name="password" style="">
+		                			<input type="text" id="password" name="password" style="background-color:transparent;outline: none;">
 		                			<label for="password">密码:</label>
 		                		</div>
 		                	</form>
@@ -80,12 +80,6 @@ $(document).on('pjax:end', function() {
 		'background-image':'url(../static/images/login/bg_5.jpg)',
 		'filter' : 'blur(9px)',
 	});
-    $("#random").skippr({
-        autoPlay : true,
-        autoPlayDuration : 3000,
-        easing:'easeInOutCubic',
-        logs : true
-    });
     $(".flp label").each(function(){
 			$(this).html("<span class='ch'>" + $(this).html().split("").join("</span><span class='ch'>") + "</span>");
 			$(".ch:contains(' ')").html("&nbsp;");
@@ -98,18 +92,27 @@ $(document).on('pjax:end', function() {
 					$(this).css('color', '#fff');
 				});
 			})
-		})
+		});
 		$(".flp input").blur(function(){
 			if($(this).val() == "")
 			{
 				$(this).next().removeClass("focussed").children().stop(true).each(function(i){
 					d = i*50;
-					$(this).delay(d).animate({fontSize: "18px", top: 0 , color : '#000'}, 50 , 'swing' , function () {
-						$(this).css('color' , '#000');
+					$(this).delay(d).animate({fontSize: "18px", top: 0 , color : '#fff'}, 50 , 'swing' , function () {
+						$(this).css('color' , '#fff');
 					});
 				})
 			}
-		})
+		});
+	setTimeout(function(){
+	    $("#random").skippr({
+	        autoPlay : true,
+	        autoPlayDuration : 3000,
+	        easing:'easeInOutCubic',
+	        logs : true
+	    });
+	    $('#password').attr('type','password');
+	},300);
 });
 </script>
 </body>
